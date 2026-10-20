@@ -38,3 +38,14 @@ def View_tasks():
         for i in content.items():
             print(f"task number is {i[0]} and , task details are {i[1]}")
 
+
+def Complete_task():
+    enter_Complete_task = input("enter the task num")
+    with open("tasks.json", "r") as f:
+        content = json.load(f)
+        for i in content.items():
+            print(f"task number is {i[0]} and , task details are {i[1]}")
+
+    with open("tasks.json", "r") as f:
+        content = json.dumps(f)
+        print(content)
